@@ -138,6 +138,7 @@ html {
     font-size: 12px;
     font-style: normal;
     font-weight: 700;
+    
 }
 
 #email {
@@ -166,7 +167,13 @@ html {
 }
 
 #btn-subscribe:hover {
-    background-color: hsl(4, 100%, 67%);
+    background: linear-gradient(90deg, #FF6A3A 0%, #FF527B 100%);
+    box-shadow: 0px 16px 32px 0px rgba(255, 97, 85, 0.50);
+    cursor: pointer;
+}
+#btn-subscribe:active {
+    background: linear-gradient(90deg, #FF6A3A 0%, #FF527B 100%);
+    box-shadow: 0px 16px 32px 0px rgba(255, 97, 85, 0.50);
     cursor: pointer;
 }
 
@@ -184,4 +191,13 @@ html {
 
 #att-anchor {
     color: hsl(228, 45%, 44%)
+}
+
+#hidden-span {
+    color: var(--colors-red, #FF6155);
+    font-family: 'Roboto-bold', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    float: right;
 }

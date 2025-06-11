@@ -1,6 +1,6 @@
-# Frontend Mentor - Newsletter sign-up form with success message solution
+# Frontend Mentor - Newsletter Sign-up Form with Success Message
 
-This is a solution to the [Newsletter sign-up form with success message challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/newsletter-signup-form-with-success-message-3FC1AZbNrv). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is my solution to the [Newsletter sign-up form with success message challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/newsletter-signup-form-with-success-message-3FC1AZbNrv).
 
 ## Table of contents
 
@@ -12,11 +12,7 @@ This is a solution to the [Newsletter sign-up form with success message challeng
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -34,20 +30,14 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![Desktop Sign-up Form](./assets/screenshots/1.png)
+![Error Message](./assets/screenshots/2.png)
+![Success Message](./assets/screenshots/3.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [GitHub Repository](https://github.com/nachar99/newsletter-sign-up-with-success-message)
+- Live Site URL: [Live Demo](https://nachar99.github.io/newsletter-sign-up-with-success-message/)
 
 ## My process
 
@@ -58,59 +48,57 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- JavaScript form validation
+- LocalStorage for email persistence
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+While building this project, I gained valuable experience in:
 
-To see how you can add code snippets, see below:
+1. **Form Validation**: Implementing real-time email validation with regex pattern matching
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
+function validateEmail(email) {
+if( /(.+)@(.+){2,}\.(.+){2,}/.test(email) ){
+localStorage.setItem("validEmail", email);
+window.location.href = "success.html";
+} else {
+span.innerHTML = 'Valid email required';
+emailInput.style.backgroundColor = "var(--colors-red-100, #FFE7E6)";
+emailInput.style.border = "1px solid var(--colors-red, #FF6155)";
 }
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
 }
-```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+2.**State Management**: Using localStorage to persist the user's email between pages
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+// Storing email
+localStorage.setItem("validEmail", email);
 
-### Continued development
+// Retrieving email
+let validEmail = localStorage.getItem("validEmail");
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+3.**Responsive Design:** Creating layouts that adapt to different screen sizes using CSS Grid and Flexbox
+#left-side {
+height: 100%;
+width: 440px;
+padding-right: 64px;
+padding-top: 71.5px;
+padding-bottom: 71.5px;
+display: flex;
+flex-direction: column;
+gap: 32px;
+}
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+## Areas I'd like to continue improving:
 
-### Useful resources
+Advanced form validation with more specific error messages
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+Implementing a mobile-first approach more consistently
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+Adding animations for smoother transitions between states
+
+Exploring CSS frameworks to streamline development
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Website - [Abdulrahman Al-Nachar](https://github.com/nachar99)
+- Frontend Mentor - [@nachar99](https://www.frontendmentor.io/profile/nachar99)
