@@ -37,7 +37,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub Repository](https://github.com/nachar99/newsletter-sign-up-with-success-message)
-- Live Site URL: [Live Demo](https://nachar99.github.io/newsletter-sign-up-with-success-message/)
+- Live Site URL: [Live Demo](https://newsletter-sign-up-with-success-message-main-hafdtklg9.vercel.app/)
 
 ## My process
 
